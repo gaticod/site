@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="compra4.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Detalles del Curso de JavaScript</title>
+</head>
+
+<body>
+    <header class="header">
+        <div class="logo">
+            <a href="inicial.html"><img src="logo_pagina.png" alt="logo" class="logo-img"></a>
+        </div>
+        <nav class="navbar">
+            <a href="miperfil.html">Inicio</a>
+          
+        </nav>
+    </header>
+
+    <div class="card-wrapper">
+        <div class="product-container">
+            <div class="card product">
+                <div class="product-imgs">
+                    <div class="img-display">
+                        <div class="img-showcase">
+                            <img src="compragrafico.jpg" alt="curso de JavaScript">
+                        </div>
+                    </div>
+
+                    <div class="img-select">
+                        <div class="img-item">
+                            <a href="compra2.html" data-id="1">
+                                <img src="comprajava.jpg" alt="curso de JavaScript">
+                            </a>
+                        </div>
+                        <div class="img-item">
+                            <a href="compra1.html" data-id="2">
+                                <img src="comprahtml.jpg" alt="curso de JavaScript">
+                            </a>
+                        </div>
+                        <div class="img-item">
+                            <a href="compra3.html" data-id="3">
+                                <img src="compradiseño.jpg" alt="curso de JavaScript">
+                            </a>
+                        </div>
+                        <div class="img-item">
+                            <a href="compra5.html" data-id="4">
+                                <img src="comprabase.jpg" alt="curso de JavaScript">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-content">
+                    <h2 class="product-title">Curso de Diseño Grafico</h2>
+                    <a href="#" class="product-link">Visita nuestra web</a>
+                    <div class="product-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                        <span>4.8 (152)</span>
+                    </div>
+                
+                    <div class="product-price">
+                        <p class="last-price">Antiguo Precio: <span>$299.00</span></p>
+                        <p class="new-price">Nuevo Precio: <span>$199.00</span></p>
+                    </div>
+                
+                    <div class="product-detail">
+                        <h2>Acerca de este Curso</h2>
+                        <p>Explora tu creatividad visual con nuestro curso de diseño gráfico. Aprende las herramientas y técnicas necesarias para crear diseños impactantes y profesionales para medios impresos y digitales.</p>
+                        <ul>
+                            <li>Duración: <span>80 horas</span></li>
+                            <li>Nivel: <span>Intermedio a Avanzado</span></li>
+                            <li>Acceso: <span>De por vida</span></li>
+                            <li>Certificación: <span>Incluida</span></li>
+                            <li>Soporte: <span>24/7</span></li>
+                        </ul>
+                    </div>
+
+                    <div class="purchase-info">
+                        <div class="quantity-selector">
+                            <button type="button" class="quantity-btn" id="decrease-btn">-</button>
+                            <input type="number" min="1" value="1" id="quantity-input">
+                            <button type="button" class="quantity-btn" id="increase-btn">+</button>
+                        </div>
+                        <button type="button" class="btn" id="add-to-cart-btn">
+                            Añadir al Carrito <i class="fas fa-shopping-cart"></i>
+                        </button>
+                        <button type="button" class="btn" id="compare-btn">Comprar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="cart-info">
+            <button class="cart-btn" id="cart-btn">
+                Precio Total: $<span id="total-price">99.00</span> <i class="fas fa-shopping-cart"></i>
+            </button>
+            <div class="cart-dropdown" id="cart-dropdown">
+                <h3>Carrito</h3>
+                <ul id="cart-items-list">
+           
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer" id="footer">
+        <div class="social-media">
+            <a href="https://wa.me/971649704" target="_blank"><img src="perfil_whatssap.png" alt="WhatsApp"></a>
+            <a href="https://web.facebook.com/luismi.qg.1" target="_blank"><img src="perfil_facebook.png" alt="Facebook"></a>
+            <a href="https://www.instagram.com/lumi___qg/" target="_blank"><img src="perfil_instagram.png" alt="Instagram"></a>
+        </div>
+        
+        <div class="extra-text">
+            <p>Estudia en GatiCod</p>
+        </div>
+    </footer>
+    
+    <script src="compra4.js"></script>
+</body>
+
+</html>

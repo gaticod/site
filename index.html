@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Venta de Cursos</title>
+    <link rel="stylesheet" href="inicial.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>GatiCod tu Mejor Opcion</h1>
+            <nav>
+                <ul>
+                    <li><a href="#services">Servicios</a></li>
+                    <li><a href="#results">Resultados</a></li>
+                    <li><a href="#benefits">Beneficios</a></li>
+                    <li><a href="#testimonials">Testimonios</a></li>
+                    <li><a href="registro.html">Ingresar</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <section id="hero">
+        <div class="container">
+            <h2>Aprende Nuevas Habilidades Online</h2>
+            <p>Descubre cursos en una variedad de temas impartidos por expertos.</p>
+            
+        </div>
+    </section>
+    <section id="services" class="container">
+        <h2>Qué Servicios Ofrecemos</h2>
+        <div class="service-content">
+            <p>Ofrecemos una variedad de cursos online que abarcan desde desarrollo web hasta marketing digital y diseño gráfico. Nuestros cursos están diseñados para ser accesibles y efectivos, permitiéndote aprender a tu propio ritmo.</p>
+            <img src="inicialservice.jpg" alt="Nuestros Servicios">
+        </div>
+    </section>
+    <section id="results" class="container">
+        <h2>Qué Resultados Esperamos</h2>
+        <div class="results-content">
+            <img src="inicialresulta.jpg" alt="Resultados Esperados">
+            <div class="results-text">
+                <p>Esperamos que al finalizar nuestros cursos, nuestros estudiantes no solo adquieran nuevos conocimientos y habilidades, sino que también mejoren sus oportunidades laborales y profesionales. Nuestra misión es ayudarte a alcanzar tus metas.</p>
+            </div>
+        </div>
+    </section>
+    <section id="benefits" class="container">
+        <h2>Beneficios</h2>
+        <div class="benefits-cards">
+            <div class="benefit-card">
+                <h3>Experiencia</h3>
+                <p>Instructores con amplia experiencia en sus campos.</p>
+                <img src="inicialexperiencia.png" alt="Seguridad">
+            </div>
+            <div class="benefit-card">
+                <h3>Seguridad</h3>
+                <p>Ambiente de aprendizaje seguro y confiable.</p>
+                <img src="inicialseguridad.png" alt="Seguridad">
+            </div>
+            <div class="benefit-card">
+                <h3>Servicio 24/7</h3>
+                <p>Soporte disponible las 24 horas del día, los 7 días de la semana.</p>
+                <img src="inicial24.png" alt="Seguridad">
+            </div>
+        </div>
+    </section>
+    <section id="testimonials" class="container">
+        <h2>Testimonios</h2>
+        <div class="testimonials-carousel">
+            <div class="testimonial-item">
+                <p>"Los cursos me han ayudado a mejorar mis habilidades y conseguir un mejor trabajo."</p>
+                <p>- Juan Pérez</p>
+            </div>
+            <div class="testimonial-item">
+                <p>"Excelente contenido y muy buenos instructores. Totalmente recomendado."</p>
+                <p>- María García</p>
+            </div>
+            <div class="testimonial-item">
+                <p>"La plataforma es fácil de usar y el soporte es muy eficiente."</p>
+                <p>- Carlos Sánchez</p>
+            </div>
+        </div>
+    </section>
+    
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Academia de Cursos.</p>
+        </div>
+    </footer>
+
+    <script>
+        let currentTestimonialIndex = 0;
+        const testimonials = document.querySelectorAll('.testimonial-item');
+        const totalTestimonials = testimonials.length;
+
+        function showTestimonial(index) {
+            testimonials.forEach((testimonial, i) => {
+                testimonial.style.display = (i === index) ? 'block' : 'none';
+            });
+        }
+
+        function nextTestimonial() {
+            currentTestimonialIndex = (currentTestimonialIndex + 1) % totalTestimonials;
+            showTestimonial(currentTestimonialIndex);
+        }
+
+ 
+        showTestimonial(currentTestimonialIndex);
+        setInterval(nextTestimonial, 5000);
+    </script>
+</body>
+</html>

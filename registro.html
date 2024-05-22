@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <title>Inicio y Registro</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="https://unicons.iconscout.com/release/v2.1.9/css/unicons.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="registro.css">
+</head>
+<body>
+  <div class="section">
+    <div class="container">
+      <div class="row full-height justify-content-center">
+        <div class="col-12 text-center align-self-center py-5">
+          <div class="section pb-5 pt-5 pt-sm-2 text-center">
+            <h6 class="mb-0 pb-3"><span>Inicio</span><span>Registro</span></h6>
+            <input class="checkbox" type="checkbox" id="reg-log" name="reg-log"/>
+            <label for="reg-log"></label>
+
+            <div class="card-3d-wrap mx-auto">
+              <div class="card-3d-wrapper">
+                <!-- Front: Login Form -->
+                <div class="card-front">
+                  <div class="center-wrap">
+                    <div class="section text-center">
+                      <h4 class="mb-4 pb-3">Inicio</h4>
+                      <div class="form-group">
+                        <input type="text" id="login-username" class="form-style" placeholder="Usuario">
+                        <i class="input-icon uil uil-at"></i>
+                      </div>
+                      <div class="form-group mt-2">
+                        <input type="password" id="login-password" class="form-style" placeholder="Contraseña">
+                        <i class="input-icon uil uil-lock-alt"></i>
+                      </div>
+                      <button onclick="login()" class="btn mt-4">Ingresar</button>
+                      <p class="mb-0 mt-4 text-center"><a href="miperfil.html" class="link">Olvidaste tu Contraseña?</a></p>
+                      <p id="login-message" class="mt-2"></p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Back: Registration Form -->
+                <div class="card-back">
+                  <div class="center-wrap">
+                    <div class="section text-center">
+                      <h4 class="mb-3 pb-3">Registro</h4>
+                      <div class="form-group">
+                        <input type="text" id="register-name" class="form-style" placeholder="Nombre">
+                        <i class="input-icon uil uil-user"></i>
+                      </div>
+                      <div class="form-group mt-2">
+                        <input type="tel" id="register-phone" class="form-style" placeholder="Telefono">
+                        <i class="input-icon uil uil-phone"></i>
+                      </div>
+                      <div class="form-group mt-2">
+                        <input type="email" id="register-email" class="form-style" placeholder="Email">
+                        <i class="input-icon uil uil-at"></i>
+                      </div>
+                      <div class="form-group mt-2">
+                        <input type="password" id="register-password" class="form-style" placeholder="Contraseña">
+                        <i class="input-icon uil uil-lock-alt"></i>
+                      </div>
+                      <button onclick="register()" class="btn mt-4">Registrar</button>
+                      <p id="register-message" class="mt-2"></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function login() {
+      const username = document.getElementById('login-username').value;
+      const password = document.getElementById('login-password').value;
+      const loginMessage = document.getElementById('login-message');
+
+      if (username === 'user' && password === '2024') {
+        loginMessage.textContent = 'Inicio de sesión exitoso';
+        loginMessage.style.color = 'green';
+        // Redirigir al perfil del usuario
+        window.location.href = 'miperfil.html';
+      } else {
+        loginMessage.textContent = 'Usuario o contraseña incorrectos';
+        loginMessage.style.color = 'red';
+      }
+    }
+
+    function register() {
+      const name = document.getElementById('register-name').value;
+      const phone = document.getElementById('register-phone').value;
+      const email = document.getElementById('register-email').value;
+      const password = document.getElementById('register-password').value;
+      const registerMessage = document.getElementById('register-message');
+
+      // Aquí puedes agregar la lógica para guardar los datos del registro
+      // Por ejemplo, enviarlos a un servidor mediante una petición AJAX.
+
+      registerMessage.textContent = 'Registro exitoso';
+      registerMessage.style.color = 'green';
+
+      // Redirigir a la página de bienvenida o login después del registro
+      window.location.href = 'bienvenido.html';
+    }
+  </script>
+</body>
+</html>
